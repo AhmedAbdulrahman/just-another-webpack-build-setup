@@ -1,0 +1,28 @@
+{
+  "name": "another-webpack-build-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "node ./tools/clean.js",
+    "prebuild": "npm run clean && node ./tools/html-copy.js",
+    "build": "webpack -p",
+    "start": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "ncp": "^2.0.0",
+    "postcss-loader": "^0.9.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.1",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.13.1"
+  }
+}
