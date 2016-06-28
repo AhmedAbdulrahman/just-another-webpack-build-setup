@@ -8,7 +8,7 @@
     "prebuild": "npm run clean && node ./tools/html-copy.js",
     "build": "webpack -p",
     "prestart": "npm run clean && node ./tools/html-copy.js",
-    "start": "webpack-dev-server --hot --port 8080 --content-base ./public/"
+    "start": "webpack-dev-server --inline --hot --port 8080 --content-base ./public/"
   },
   "author": "",
   "license": "MIT",
