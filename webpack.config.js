@@ -9,10 +9,11 @@ module.exports = {
   },
   output: {
     path: path.join(process.cwd(), 'public'),
+    publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
-    preloaders: [
+    preLoaders: [
       {
         test: /\.js$/,
         loader: 'eslint',
