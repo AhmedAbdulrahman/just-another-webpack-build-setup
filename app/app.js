@@ -1,5 +1,5 @@
 // CSS
-import './css/basic.styl';
+import './css/styles.styl';
 
 // JS
 import './js/logger.js';
