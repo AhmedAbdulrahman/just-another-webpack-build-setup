@@ -9,10 +9,16 @@ module.exports = {
   },
   output: {
     path: path.join(process.cwd(), 'public'),
-    publicPath: 'public',
     filename: 'bundle.js'
   },
   module: {
+    preloaders: [
+      {
+        test: /\.js$/,
+        loader: 'eslint',
+        exclude: /node_modules/
+      }
+    ],
     loaders: [
       {
         test: /\.styl$/,
@@ -35,6 +41,6 @@ module.exports = {
     new ExtractTextPlugin('styles.css')
   ],
   postcss: function () {
-    return [ autoprefixer({ browsers: ['last 3 versions', 'iOS >= 8'] }) ];
+    return [ autoprefixer({ browsers: ['last 2 versions'] }) ];
   }
 }
